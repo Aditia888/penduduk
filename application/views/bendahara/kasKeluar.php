@@ -11,7 +11,7 @@
         						</div>
         						<div class="table-data__tool-right">
         							<button class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#addKasKeluarModal">
-        								<i class="zmdi zmdi-plus"></i>pemasukan</button>
+        								<i class="zmdi zmdi-plus"></i>Pengeluaran</button>
         						</div>
         					</div>
         					<!-- DATA TABLE-->
@@ -39,7 +39,7 @@
         													<i class="zmdi zmdi-edit"></i>
         												</button>
         												<button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-        													<a href="#!" onclick="deleteConfirm('<?= $kel->idKas; ?>')">
+        													<a href="#!" onclick="deleteConfirm('<?= base_url('penduduk/delkas/' . $kel->idKas); ?>')">
         														<i class="zmdi zmdi-delete" style="color:red"></i>
         												</button>
         											</div>
