@@ -77,11 +77,11 @@
         <!-- END STATISTIC-->
 
     <?php else: ?>
-        <!-- DASHBOARD PENGENALAN PT DUTA ASRI CIAKAR -->
+        <!-- DASHBOARD PENGENALAN PERUMAHAN DUTA ASRI CIAKAR -->
         <section class="welcome p-t-60">
             <div class="container text-center">
                 <h1 class="title-4">Selamat Datang di</h1>
-                <h2 class="title-3">PT Duta Asri Ciakar</h2>
+                <h2 class="title-3">Perumahan Duta Asri Ciakar</h2>
                 <p class="m-t-20">Perumahan modern yang nyaman dan strategis di wilayah Ciakar.</p>
                 <img src="<?= base_url('assets/images/duta-asri-banner.jpg'); ?>" alt="Duta Asri Ciakar" class="img-fluid m-t-30" style="max-width: 800px;">
             </div>
