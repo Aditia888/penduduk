@@ -37,15 +37,9 @@
 				<td>
 					<img src="<?= base_url(); ?>assets/icon-home.png" style="width: 100px; height: 50px;">
 				</td>
-				<td>
-					<center>
-						<h3>KAS-RT</h3>
-						<h5>Jl Raya Jakarta.</h5>
-						<h5>Kota Administrasi, Jakarta Utara – Indonesia</h5>
-					</center>
-				</td>
 			</tr>
 		</table>
+		<br />
 		<h4>LAPORAN DATA WARGA</h4>
 	</center>
 	<hr>

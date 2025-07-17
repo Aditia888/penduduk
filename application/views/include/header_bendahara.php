@@ -102,14 +102,14 @@ if ($user && isset($user['idWarga']) && $user['idWarga'] != '0') {
                             </div>
                         </li>
 
-                        <li class="nav-item mr-3">
+                        <!-- <li class="nav-item mr-3">
                             <a class="nav-link text-white" href="<?= base_url('warga/pembaruanData'); ?>">
                                 <i class="fas fa-sync-alt"></i> Form Perubahan Data
                                 <?php if ($jumlah_pending > 0): ?>
                                     <span class="badge badge-warning"><?= $jumlah_pending; ?></span>
                                 <?php endif; ?>
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
 
