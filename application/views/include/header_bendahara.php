@@ -2,6 +2,7 @@
 $jumlah_pending = 0;
 
 if ($user && isset($user['idWarga']) && $user['idWarga'] != '0') {
+    /** @var M_PembaruanData $CI */
     $CI = &get_instance();
     $CI->load->model('M_PembaruanData');
     $jumlah_pending = $CI->M_PembaruanData->countPengajuanByWarga($user['idWarga']);
@@ -74,13 +75,13 @@ if ($user && isset($user['idWarga']) && $user['idWarga'] != '0') {
                             </a>
                             <div class="dropdown-menu" aria-labelledby="kasDropdown" style="background-color: #393939 !important;">
                                 <a class="dropdown-item text-white" href="<?= base_url('penduduk'); ?>">
-                                    <i class="fas fa-plus"></i> Kas Masuk
+                                    <i class="fas fa-plus"></i> Pembayaran (Kas)
                                 </a>
-                                <a class="dropdown-item text-white" href="<?= base_url('penduduk/kasKeluar'); ?>">
+                                <!-- <a class="dropdown-item text-white" href="<?= base_url('penduduk/kasKeluar'); ?>">
                                     <i class="fas fa-minus"></i> Kas Keluar
-                                </a>
+                                </a> -->
                                 <a class="dropdown-item text-white" href="<?= base_url('penduduk/sampah'); ?>">
-                                    <i class="fas fa-plus"></i> Pembayaran Sampah
+                                    <i class="fas fa-plus"></i> Pembayaran (Sampah)
                                 </a>
                             </div>
                         </li>

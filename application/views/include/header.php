@@ -73,13 +73,13 @@ if ($user && $user['role_id'] == '1') {
                             </a>
                             <div class="dropdown-menu" aria-labelledby="kasDropdown" style="background-color: #393939 !important;">
                                 <a class="dropdown-item text-white" href="<?= base_url('penduduk'); ?>">
-                                    <i class="fas fa-plus"></i> Kas Masuk
+                                    <i class="fas fa-plus"></i> Pembayaran (Kas)
                                 </a>
-                                <a class="dropdown-item text-white" href="<?= base_url('penduduk/kasKeluar'); ?>">
+                                <!-- <a class="dropdown-item text-white" href="<?= base_url('penduduk/kasKeluar'); ?>">
                                     <i class="fas fa-minus"></i> Kas Keluar
-                                </a>
+                                </a> -->
                                 <a class="dropdown-item text-white" href="<?= base_url('penduduk/sampah'); ?>">
-                                    <i class="fas fa-plus"></i> Pembayaran Sampah
+                                    <i class="fas fa-plus"></i> Pembayaran (Sampah)
                                 </a>
                             </div>
                         </li>
