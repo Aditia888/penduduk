@@ -110,7 +110,13 @@
 			}
 
 			$(document).ready(function() {
-				$('.select2').select2()
+				$('.select2').select2();
+
+				$('input[type="number"]').on('input', function() {
+					if (parseFloat($(this).val()) <= 0) {
+						$(this).val('');
+					}
+				});
 			});
 		</script>
 		</body>
