@@ -58,17 +58,17 @@
         											<?php if (in_array($user['role_id'], ['1', '4'])) { ?>
         												<div class="table-data-feature">
         													<?php if ($s->status_persetujuan == 0) { ?>
-        														<button class="item" data-toggle="modal" data-target="#setujuiPembayaranSampah<?= $s->idKas; ?>" data-placement="top" title="Edit">
+        														<button class="item" data-toggle="modal" data-target="#setujuiPembayaranSampah<?= $s->idKas; ?>" data-placement="top" title="Setujui">
         															<i class="zmdi zmdi-check" style="color: green;"></i>
         														</button>
-        														<button class="item" data-toggle="modal" data-target="#tolakPembayaranSampah<?= $s->idKas; ?>" data-placement="top" title="Edit">
+        														<button class="item" data-toggle="modal" data-target="#tolakPembayaranSampah<?= $s->idKas; ?>" data-placement="top" title="Tolak">
         															<i class="zmdi zmdi-close" style="color: red;"></i>
         														</button>
         													<?php } ?>
         													<button class="item" data-toggle="modal" data-target="#editPembayaranSampahModal<?= $s->idKas; ?>" data-placement="top" title="Edit">
         														<i class="zmdi zmdi-edit"></i>
         													</button>
-        													<button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+        													<button class="item" data-toggle="tooltip" data-placement="top" title="Hapus">
         														<a href="#!" onclick="deleteConfirm('<?= base_url('penduduk/delkas/' . $s->idKas); ?>')">
         															<i class="zmdi zmdi-delete" style="color:red"></i>
         														</a>
