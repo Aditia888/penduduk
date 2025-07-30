@@ -66,7 +66,7 @@
 			<!-- END DATA TABLE-->
 
 			<!-- modal addUser -->
-			<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModal" aria-hidden="true">
+			<div class="modal fade" id="addUserModal" role="dialog" aria-labelledby="addUserModal" aria-hidden="true" style="overflow:hidden;">
 				<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -97,7 +97,7 @@
 									</div>
 									<div class="form-group">
 										<label>Nama Warga</label>
-										<select class="form-control" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
+										<select class="form-control select2" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
 											<option>Pilih ...</option>
 											<?php
 											foreach ($warga as $w) {
@@ -121,7 +121,7 @@
 			<!-- modal editUser -->
 			<?php $no = 0;
 			foreach ($auth as $val): $no++; ?>
-				<div class="modal fade" id="editUserModal<?= $val->user_id; ?>" tabindex="-1" role="dialog" aria-labelledby="editUserModal" aria-hidden="true">
+				<div class="modal fade" id="editUserModal<?= $val->user_id; ?>" role="dialog" aria-labelledby="editUserModal" aria-hidden="true" style="overflow:hidden;">
 					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -172,7 +172,7 @@
 									</div>
 									<div class="form-group">
 										<label>Nama Warga</label>
-										<select class="form-control" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
+										<select class="form-control select2" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
 											<option value="">Pilih ...</option>
 											<?php
 											foreach ($warga as $w) {
