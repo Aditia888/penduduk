@@ -25,7 +25,7 @@ class Kas extends CI_Controller
             'username' => $this->session->userdata('username')
         ])->row_array();
 
-        if ($user['role_id'] != 4) show_error("Hanya untuk warga");
+        // if ($user['role_id'] != 4) show_error("Hanya untuk warga");
 
         $idWarga = $user['idWarga'];
 

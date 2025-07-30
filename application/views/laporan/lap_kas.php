@@ -68,7 +68,7 @@
 					<td align="center"><?= $no++; ?></td>
 					<td><?= $kas->idKas; ?></td>
 					<td><?= ucfirst($kas->jenis); ?></td>
-					<td><?= ($kas->idWarga != 0 ? ucwords(strtolower($namaWarga[$kas->idWarga])) : ''); ?></td>
+					<td><?= ((array_key_exists($kas->idWarga,$namaWarga) && $kas->idWarga != 0) ? ucwords(strtolower($namaWarga[$kas->idWarga])) : ''); ?></td>
 					<td><?= tgl_indo($kas->tanggal); ?></td>
 					<td><?= $kas->keterangan; ?></td>
 					<td align="right"><?= ($kas->jenis == 'keluar' ? '-' : '') . rupiah($kas->jumlah); ?></td>

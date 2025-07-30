@@ -17,9 +17,9 @@ class KritikSaran extends CI_Controller
         $username = $this->session->userdata('username');
         $user = $this->db->get_where('users', ['username' => $username])->row_array();
 
-        if (!$user || in_array($user['role_id'], [1, 5])) {
-            show_error('Anda tidak memiliki akses ke halaman ini.');
-        }
+        // if (!$user || in_array($user['role_id'], [1, 5])) {
+        //     show_error('Anda tidak memiliki akses ke halaman ini.');
+        // }
 
         if (!isset($user['idWarga'])) {
             show_error('Akun Anda belum terhubung ke data warga. Hubungi admin.');
