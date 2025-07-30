@@ -25,19 +25,20 @@ class Auth extends CI_Controller
 	{
 		$username = $this->input->post('username');
 		$pass = $this->input->post('password');
-		$user = $this->db->get_where('users', ['username' => $username])->row_array();
-		//jika user ada
+
+		// ambil user hanya yang belum dihapus
+		$user = $this->db->get_where('users', ['username' => $username, 'is_delete' => 0])->row_array();
+
 		if ($user) {
-			//jika user aktif
 			if ($user['is_active'] == 1) {
-				//cek password
 				if (password_verify($pass, $user['password'])) {
 					$data = [
 						'username' => $user['username'],
 						'role_id' => $user['role_id']
 					];
-
 					$this->session->set_userdata($data);
+
+					// Redirect sesuai role
 					if ($user['role_id'] == 1) {
 						redirect('admin');
 					} else if ($user['role_id'] == 5) {
@@ -56,7 +57,7 @@ class Auth extends CI_Controller
 				redirect('auth');
 			}
 		} else {
-			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Username is not registered!</div>');
+			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Username is not registered or has been deleted!</div>');
 			redirect('auth');
 		}
 	}

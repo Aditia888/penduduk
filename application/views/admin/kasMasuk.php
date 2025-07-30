@@ -118,7 +118,7 @@
         							</div>
         							<div class="form-group">
         								<label>Nama Warga</label>
-        								<select class="form-control" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
+        								<select class="form-control select2" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
         									<option>Pilih ...</option>
         									<?php
 											foreach ($warga as $w) {
@@ -175,7 +175,7 @@
         							</div>
         							<div class="form-group">
         								<label>Nama Warga</label>
-        								<select class="form-control" name="idWarga" id="idWarga" value="<?= $val->idWarga; ?>">
+        								<select class="form-control select2" name="idWarga" id="idWarga" value="<?= $val->idWarga; ?>">
         									<option value="">Pilih ...</option>
         									<?php
 											foreach ($warga as $w) {

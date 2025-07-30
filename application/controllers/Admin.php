@@ -25,13 +25,15 @@ class Admin extends CI_Controller
 				$data['user'] = $user;
 				$data['masuk'] = $this->m_kas->TotalMasuk();
 				$data['keluar'] = $this->m_kas->TotalKeluar();
+
+				$data['totalMasukKas'] = $this->m_kas->TotalMasukKas();
+				$data['totalMasukSampah'] = $this->m_kas->TotalMasukSampah();
 				$this->load->view('include/header', $data);
 				$this->load->view('index', $data);
 				$this->load->view('include/footer');
-			} else if ($user['role_id'] == 3) {
+			} else if ($user['role_id'] == 5) {
+				// Bendahara
 				redirect('users/bendahara');
-			} else if ($user['role_id'] == 2) {
-				redirect('users');
 			} else {
 				redirect('users/warga');
 			}

@@ -24,6 +24,8 @@ class Users extends CI_Controller
 		$data['user'] = $user;
 		$data['masuk'] = $this->m_kas->TotalMasuk();
 		$data['keluar'] = $this->m_kas->TotalKeluar();
+		$data['totalMasukKas'] = $this->m_kas->TotalMasukKas();
+		$data['totalMasukSampah'] = $this->m_kas->TotalMasukSampah();
 		$this->load->view('include/header_1', $data);
 		$this->load->view('index', $data);
 		$this->load->view('include/footer');
@@ -39,6 +41,8 @@ class Users extends CI_Controller
 		$data['user'] = $user;
 		$data['masuk'] = $this->m_kas->TotalMasuk();
 		$data['keluar'] = $this->m_kas->TotalKeluar();
+		$data['totalMasukKas'] = $this->m_kas->TotalMasukKas();
+		$data['totalMasukSampah'] = $this->m_kas->TotalMasukSampah();
 		$this->load->view('include/header_bendahara', $data);
 		$this->load->view('index', $data);
 		$this->load->view('include/footer');
@@ -54,6 +58,8 @@ class Users extends CI_Controller
 		$data['user'] = $user;
 		$data['masuk'] = $this->m_kas->TotalMasuk();
 		$data['keluar'] = $this->m_kas->TotalKeluar();
+		$data['totalMasukKas'] = $this->m_kas->TotalMasukKas();
+		$data['totalMasukSampah'] = $this->m_kas->TotalMasukSampah();
 		$this->load->view('include/header_warga', $data);
 		$this->load->view('index', $data);
 		$this->load->view('include/footer');

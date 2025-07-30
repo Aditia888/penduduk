@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Warga</label>
-                                        <select class="form-control" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
+                                        <select class="form-control select2" name="idWarga" id="idWarga" value="<?= set_value('idWarga'); ?>">
                                             <option value="">Pilih ...</option>
                                             <?php if (array_key_exists($user['idWarga'], $namaWarga)) { ?>
                                                 <option value="<?= $warga[0]->idWarga; ?>" selected><?= $warga[0]->nama; ?></option>
@@ -157,7 +157,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Warga</label>
-                                        <select class="form-control" name="idWarga" id="idWarga" value="<?= $val->idWarga; ?>">
+                                        <select class="form-control select2" name="idWarga" id="idWarga" value="<?= $val->idWarga; ?>">
                                             <option value="">Pilih ...</option>
                                             <?php
                                             foreach ($warga as $w) {

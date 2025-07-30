@@ -120,6 +120,16 @@ class M_kas extends CI_Model
 		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" ')->result();
 	}
 
+	public function TotalMasukKas()
+	{
+		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" AND `status` = "kas"')->result();
+	}
+
+	public function TotalMasukSampah()
+	{
+		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" AND `status` = "sampah"')->result();
+	}
+
 	public function getKasKeluar()
 	{
 		return $this->db->get_where('data_transaksi', ['jenis' => 'keluar'])->result();
@@ -132,8 +142,10 @@ class M_kas extends CI_Model
 
 	public function getWarga($idWarga = '', $filter = [])
 	{
-
 		$this->db->from('data_warga');
+
+		// Hanya ambil data yang tidak dihapus
+		$this->db->where('is_delete', 0);
 
 		// Jika pencarian berdasarkan ID Warga (misal untuk detail)
 		if (!empty($idWarga)) {
@@ -183,7 +195,8 @@ class M_kas extends CI_Model
 
 	public function delWarga($idWarga)
 	{
-		return $this->db->delete('data_warga', ['idWarga' => $idWarga]);
+		// return $this->db->delete('data_warga', ['idWarga' => $idWarga]);
+		return $this->db->update('data_warga', ['is_delete' => 1], ['idWarga' => $idWarga]);
 	}
 
 	public function kredit()

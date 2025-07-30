@@ -108,6 +108,10 @@
 				$('#btn-delete').attr('href', url);
 				$('#deleteModal').modal();
 			}
+
+			$(document).ready(function() {
+				$('.select2').select2();
+			});
 		</script>
 		</body>
 
