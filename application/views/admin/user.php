@@ -22,7 +22,7 @@
 											<th>nama</th>
 											<th>username</th>
 											<th>gambar</th>
-											<th>is_active</th>
+											<th>Status</th>
 											<th>role</th>
 											<th>email</th>
 											<th>id warga</th>
@@ -35,7 +35,7 @@
 												<td><?= $val->user; ?></td>
 												<td><?= $val->username; ?></td>
 												<td><img width="20%" src="<?= base_url('assets/profil/') . $val->img; ?>" /></td>
-												<td class="process"><?= $val->is_active; ?></td>
+												<td><?= ($val->is_active == 1 ? 'Aktif' : 'Tidak Aktif'); ?></td>
 												<td class="process"><?= $val->role; ?></td>
 												<td><?= $val->email; ?></td>
 												<td><?= ($val->idWarga != 0 ? ucwords(strtolower($namaWarga[$val->idWarga])) : ''); ?></td>
