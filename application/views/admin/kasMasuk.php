@@ -102,7 +102,7 @@
         	<!-- END DATA TABLE-->
 
         	<!-- modal addKasMasuk -->
-        	<div class="modal fade" id="addKasMasukModal" role="dialog" aria-labelledby="addKasMasukModal" aria-hidden="true">
+        	<div class="modal fade" id="addKasMasukModal" role="dialog" aria-labelledby="addKasMasukModal" aria-hidden="true" style="overflow:hidden;">
         		<div class="modal-dialog modal-dialog-centered" role="document">
         			<div class="modal-content">
         				<div class="modal-header">
@@ -158,7 +158,7 @@
         	<!-- modal editKasModal -->
         	<?php $no = 0;
 			foreach ($masuk as $val): $no++; ?>
-        		<div class="modal fade" id="editKasModal<?= $val->idKas; ?>" role="dialog" aria-labelledby="editKasModal" aria-hidden="true">
+        		<div class="modal fade" id="editKasModal<?= $val->idKas; ?>" role="dialog" aria-labelledby="editKasModal" aria-hidden="true" style="overflow:hidden;">
         			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         				<div class="modal-content">
         					<div class="modal-header">

@@ -198,12 +198,8 @@ class Penduduk extends CI_Controller
 
 	public function addKas()
 	{
-		$jenis = $this->m_kas->getKas([
-			'idKas' => $this->input->post('id_kas')
-		])['jenis'];
-		$status = $this->m_kas->getKas([
-			'idKas' => $this->input->post('id_kas')
-		])['status'];
+
+
 		$this->m_kas->cekNomor();
 		$data = [
 			'idKas' => $this->input->post('id_kas'),
@@ -213,7 +209,14 @@ class Penduduk extends CI_Controller
 			'jenis' => $this->input->post('jenis'),
 			'idWarga' => $this->input->post('idWarga'),
 		];
+
 		$this->m_kas->saveKas($data);
+		$status = $this->m_kas->getKas([
+			'idKas' => $this->input->post('id_kas')
+		])['status'];
+		$jenis = $this->m_kas->getKas([
+			'idKas' => $this->input->post('id_kas')
+		])['jenis'];
 		if ($status == 'kas') {
 			// Kas
 			if ($jenis == 'masuk') {
