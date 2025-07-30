@@ -122,12 +122,12 @@ class M_kas extends CI_Model
 
 	public function TotalMasukKas()
 	{
-		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" AND `status` = "kas"')->result();
+		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" AND `status` = "kas" AND status_persetujuan = "1"')->result();
 	}
 
 	public function TotalMasukSampah()
 	{
-		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" AND `status` = "sampah"')->result();
+		return $this->db->query('SELECT SUM(jumlah) as total from data_transaksi where jenis="masuk" AND `status` = "sampah" AND status_persetujuan = "1"')->result();
 	}
 
 	public function getKasKeluar()

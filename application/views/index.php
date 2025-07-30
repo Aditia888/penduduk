@@ -69,7 +69,10 @@
                     <div class="statistic__item statistic__item--blue">
                         <?php
                         $sum_masuk = 0;
-                        foreach ($masuk as $total_masuk) {
+                        foreach ($totalMasukKas as $total_masuk) {
+                            $sum_masuk += $total_masuk->total;
+                        }
+                        foreach ($totalMasukSampah as $total_masuk) {
                             $sum_masuk += $total_masuk->total;
                         }
                         $sum_keluar = 0;
